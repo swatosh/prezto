@@ -27,6 +27,13 @@ export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 
 alias trun='bundle exec torquebox run -J "\-Xmx2048m"'
 
+# Run Rubocop on your changed files
+alias rubo="git diff --name-only --diff-filter=MA | xargs rubocop"
+
+# Docker Aliases
+alias dc="docker-compose"
+alias dcra="docker-compose run app"
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -119,6 +126,12 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
 alias ru="bundle exec rackup -p3000"
 
+# Authly:
+alias authly_dev="authly --rolearn arn:aws:iam::454256234014:role/DEVELOPER"
+alias authly_dev_admin="authly --rolearn arn:aws:iam::454256234014:role/ADFS_ADMIN"
+alias authly_prod_op="authly --rolearn arn:aws:iam::350648338153:role/OPERATOR"
+alias authly_prod_ro="authly --rolearn arn:aws:iam::350648338153:role/READONLY"
+alias authly_dev_loop="while true; do authly_dev; sleep 3500; done"
 
 eval "$(rbenv init -)"
 export EDITOR='vim'
