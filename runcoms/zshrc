@@ -136,3 +136,4 @@ alias authly_dev_loop="while true; do authly_dev; sleep 3500; done"
 eval "$(rbenv init -)"
 export EDITOR='vim'
 source ~/.tmuxinator.zsh
+eval "$(direnv hook zsh)"
