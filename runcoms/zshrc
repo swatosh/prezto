@@ -23,6 +23,9 @@ export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
 export TERM=xterm-256color
 export DIBS_LOCAL="$HOME/Projects/Nike/RSVP/dw-dibs"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
+export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
+
 #ALIASES
 
 alias trun='bundle exec torquebox run -J "\-Xmx2048m"'
@@ -137,3 +140,5 @@ eval "$(rbenv init -)"
 export EDITOR='vim'
 source ~/.tmuxinator.zsh
 eval "$(direnv hook zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
