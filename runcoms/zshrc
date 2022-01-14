@@ -95,6 +95,7 @@ alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 alias stage="gps;git push stage stage:master"
 alias be='bundle exec'
 alias isim="pen /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
+alias br="./bin/rails"
 
 #Compile Rails Assets
 alias precompile='RAILS_ENV=production bundle exec rake assets:precompile'
@@ -139,5 +140,4 @@ eval "$(direnv hook zsh)"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Add kubernetes (kubectl) autocomplete permanently to your zsh shell
-echo "[[ $commands[kubectl] ]] && source <(kubectl completion zsh)" >> ~/.zshrc
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
