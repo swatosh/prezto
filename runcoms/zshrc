@@ -37,6 +37,9 @@ alias rubo="git diff --name-only --diff-filter=MA | xargs rubocop"
 alias dc="docker-compose"
 alias dcra="docker-compose run app"
 
+# Kubernetes cli
+alias k=kubectl
+
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
 alias ...="cd ../.."
@@ -127,18 +130,14 @@ alias stfu="osascript -e 'set volume output muted true'"
 alias pumpitup="osascript -e 'set volume 10'"
 alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 
-alias ru="bundle exec rackup -p3000"
-
-# Authly:
-alias authly_dev="authly --rolearn arn:aws:iam::454256234014:role/DEVELOPER"
-alias authly_dev_admin="authly --rolearn arn:aws:iam::454256234014:role/ADFS_ADMIN"
-alias authly_prod_op="authly --rolearn arn:aws:iam::350648338153:role/OPERATOR"
-alias authly_prod_ro="authly --rolearn arn:aws:iam::350648338153:role/READONLY"
-alias authly_dev_loop="while true; do authly_dev; sleep 3500; done"
-
 eval "$(rbenv init -)"
 export EDITOR='vim'
 source ~/.tmuxinator.zsh
 eval "$(direnv hook zsh)"
 
+# Add fzf to your ctrl + r terminal reverse search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Add kubernetes (kubectl) autocomplete permanently to your zsh shell
+echo "[[ $commands[kubectl] ]] && source <(kubectl completion zsh)" >> ~/.zshrc
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
