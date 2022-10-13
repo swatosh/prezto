@@ -25,6 +25,7 @@ export DIBS_LOCAL="$HOME/Projects/Nike/RSVP/dw-dibs"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
 export PATH=$HOME/.composer/vendor/bin:$PATH
 export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 
 #ALIASES
 
@@ -36,9 +37,6 @@ alias rubo="git diff --name-only --diff-filter=MA | xargs rubocop"
 # Docker Aliases
 alias dc="docker-compose"
 alias dcra="docker-compose run app"
-
-# Kubernetes cli
-alias k=kubectl
 
 # Easier navigation: .., ..., ~ and -
 alias ..="cd .."
@@ -139,5 +137,3 @@ eval "$(direnv hook zsh)"
 # Add fzf to your ctrl + r terminal reverse search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Add kubernetes (kubectl) autocomplete permanently to your zsh shell
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
