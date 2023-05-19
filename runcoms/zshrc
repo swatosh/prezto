@@ -97,7 +97,7 @@ alias stage="gps;git push stage stage:master"
 alias be='bundle exec'
 alias isim="pen /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Applications/iPhone\ Simulator.app"
 alias br="./bin/rails"
-alias jg="grep -RI --exclude-dir=node_modules --exclude-dir=public --exclude-dir=bootsnap --exclude-dir=coverage --exclude-dir=tinymce --exclude-dir=tmp --exclude-dir=vendor --exclude-dir=log --exclude-dir=bundler --exclude-dir=.git --devices=skip --exclude=\"*.js.map\" --exclude=\"*.svg\"""
+alias jg="grep -RI --exclude-dir=node_modules --exclude-dir=public --exclude-dir=bootsnap --exclude-dir=coverage --exclude-dir=tinymce --exclude-dir=tmp --exclude-dir=vendor --exclude-dir=log --exclude-dir=bundler --exclude-dir=.git --devices=skip --exclude=\"*.js.map\" --exclude=\"*.svg\""
 alias check-for-spree-updates="eval \"$(sed -n  -e"s|^.*'https://github.com/spree/\(.*\)',.*ref: '\(.*\)'.*$|(cd ~/philz/\1 ; git --no-pager fetch --all ; pwd ; git --no-pager log --pretty=oneline --abbrev-commit --graph \2..main)|p" Gemfile)\""
 
 #Compile Rails Assets
