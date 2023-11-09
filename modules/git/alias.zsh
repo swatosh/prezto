@@ -30,23 +30,23 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias g='git'
 
   # Branch (b)
-  alias gb='git branch'
-  alias gba='git branch --all --verbose'
-  alias gbc='git checkout -b'
-  alias gbd='git branch --delete'
-  alias gbD='git branch --delete --force'
-  alias gbl='git branch --verbose'
-  alias gbL='git branch --all --verbose'
-  alias gbm='git branch --move'
-  alias gbM='git branch --move --force'
-  alias gbr='git branch --move'
-  alias gbR='git branch --move --force'
-  alias gbs='git show-branch'
-  alias gbS='git show-branch --all'
-  alias gbv='git branch --verbose'
-  alias gbV='git branch --verbose --verbose'
-  alias gbx='git branch --delete'
-  alias gbX='git branch --delete --force'
+  alias gb='git --no-pager branch'
+  alias gba='git --no-pager branch --all --verbose'
+  alias gbc='git --no-pager checkout -b'
+  alias gbd='git --no-pager branch --delete'
+  alias gbD='git --no-pager branch --delete --force'
+  alias gbl='git --no-pager branch --verbose'
+  alias gbL='git --no-pager branch --all --verbose'
+  alias gbm='git --no-pager branch --move'
+  alias gbM='git --no-pager branch --move --force'
+  alias gbr='git --no-pager branch --move'
+  alias gbR='git --no-pager branch --move --force'
+  alias gbs='git --no-pager show-branch'
+  alias gbS='git --no-pager show-branch --all'
+  alias gbv='git --no-pager branch --verbose'
+  alias gbV='git --no-pager branch --verbose --verbose'
+  alias gbx='git --no-pager branch --delete'
+  alias gbX='git --no-pager branch --delete --force'
 
   # Commit (c)
   alias gc='git commit --verbose'
@@ -71,6 +71,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias gcl='git-commit-lost'
   alias gcy='git cherry --verbose --abbrev'
   alias gcY='git cherry --verbose'
+  alias gsw='git switch'
 
   # Conflict (C)
   alias gCl='git --no-pager diff --name-only --diff-filter=U'
@@ -99,6 +100,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias gfma='git pull --autostash'
   alias gfr='git pull --rebase'
   alias gfra='git pull --rebase --autostash'
+  alias gpulla='git pull --all --prune --tags --ff'
 
   # Flow (F)
   alias gFi='git flow init'
@@ -211,7 +213,6 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias gpc='git push --set-upstream origin "$(git-branch-current 2> /dev/null)"'
   alias gpp='git pull origin "$(git-branch-current 2> /dev/null)" && git push origin "$(git-branch-current 2> /dev/null)"'
   alias gpusho='git push origin "$(git branch --show-current)"'
-  alias gpulla='git pull --all --prune --tags --ff'
 
   # Rebase (r)
   alias gr='git rebase'
@@ -231,19 +232,19 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias gRs='git remote show'
   alias gRb='git-hub-browse'
 
-  # Stash (s)
-  alias gs='git stash'
-  alias gsa='git stash apply'
-  alias gsx='git stash drop'
-  alias gsX='git-stash-clear-interactive'
-  alias gsl='git stash list'
-  alias gsL='git-stash-dropped'
-  alias gsd='git stash show --patch --stat'
-  alias gsp='git stash pop'
-  alias gsr='git-stash-recover'
-  alias gss='git stash save --include-untracked'
-  alias gsS='git stash save --patch --no-keep-index'
-  alias gsw='git stash save --include-untracked --keep-index'
+  # # Stash (s)
+  # alias gs='git stash'
+  # alias gsa='git stash apply'
+  # alias gsx='git stash drop'
+  # alias gsX='git-stash-clear-interactive'
+  # alias gsl='git stash list'
+  # alias gsL='git-stash-dropped'
+  # alias gsd='git stash show --patch --stat'
+  # alias gsp='git stash pop'
+  # alias gsr='git-stash-recover'
+  # alias gss='git stash save --include-untracked'
+  # alias gsS='git stash save --patch --no-keep-index'
+  # alias gsw='git stash save --include-untracked --keep-index'
 
   # Submodule (S)
   alias gS='git submodule'
