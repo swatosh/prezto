@@ -137,8 +137,8 @@ alias hax="growlnotify -a 'Activity Monitor' 'System error' -m 'WTF R U DOIN'"
 eval "$(rbenv init -)"
 export EDITOR='vim'
 export BUNDLER_EDITOR='vim'
-source ~/.tmuxinator.zsh
-eval "$(direnv hook zsh)"
+# source ~/.tmuxinator.zsh
+# eval "$(direnv hook zsh)"
 
 # Add fzf to your ctrl + r terminal reverse search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
