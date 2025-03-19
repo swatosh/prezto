@@ -138,7 +138,7 @@ eval "$(rbenv init -)"
 export EDITOR='nvim'
 export BUNDLER_EDITOR='nvim'
 # source ~/.tmuxinator.zsh
-# eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
 
 # Add fzf to your ctrl + r terminal reverse search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
