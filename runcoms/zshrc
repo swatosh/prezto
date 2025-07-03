@@ -15,16 +15,9 @@ fi
 # promptinit
 # prompt peepcode ☢
 
-MYSQL=/usr/local/mysql/bin
-export PATH=$PATH:$MYSQL
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-# export PATH='/usr/local/sbin:$PATH'
 # for tmux: export 256color
 export TERM=xterm-256color
-export DIBS_LOCAL="$HOME/Projects/Nike/RSVP/dw-dibs"
 export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig"
-export PATH=$HOME/.composer/vendor/bin:$PATH
-export PATH="/usr/local/opt/postgresql@13/bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
 
 # Make ls directory names readable on black background
