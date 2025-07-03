@@ -65,8 +65,11 @@ alias spoton="sudo mdutil -a -i on"
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-request -m '$method'"; done
 
 eval "$(rbenv init -)"
+
 export EDITOR='nvim'
 export BUNDLER_EDITOR='nvim'
+export MANPAGER='/opt/homebrew/bin/nvim +Man!'
+
 source ~/.tmuxinator.zsh
 eval "$(direnv hook zsh)"
 
