@@ -26,7 +26,7 @@ export LSCOLORS=ExfxcxdxbxEgEdabagacad
 #ALIASES
 
 # Run Rubocop on your changed files
-alias rubo="git diff --name-only --diff-filter=MA | xargs rubocop"
+alias rubo="git diff --name-only --diff-filter=MA | xargs bundle exec rubocop"
 
 # Docker Aliases
 alias dc="docker-compose"
@@ -44,22 +44,16 @@ alias ll="ls -Gla"
 alias g="git --no-pager"
 alias v="nvim"
 alias ls="ls -G"
-alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false"
-alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-alias br="./bin/rails"
 alias jg="grep -RIE --exclude-dir=node_modules --exclude-dir=public --exclude-dir=bootsnap --exclude-dir=coverage --exclude-dir=tinymce --exclude-dir=tmp --exclude-dir=vendor --exclude-dir=log --exclude-dir=bundler --exclude-dir=.git --devices=skip --exclude=\"*.js.map\" --exclude=\"*.svg\""
+alias pull-all-repos="find ~ \( -path ~/Library/* -or -path ~/.Trash* -or -path ~/.local/* \) -prune -or -maxdepth 6 -type d -name .git -print -execdir zsh -c 'git remote -v show | tee >([ \$(wc -c) -gt 0 ] && git pull --all --prune) &' \;"
+alias be="bundle exec"
 
 # File size
 alias fs="stat -f \"%z bytes\""
 
 # ROT13-encode text. Works for decoding, too! ;)
 alias rot13='tr a-zA-Z n-za-mN-ZA-M'
-
-# Disable Spotlight
-alias spotoff="sudo mdutil -a -i off"
-# Enable Spotlight
-alias spoton="sudo mdutil -a -i on"
 
 # One of @janmoesen’s ProTip™s
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do alias "$method"="lwp-request -m '$method'"; done
