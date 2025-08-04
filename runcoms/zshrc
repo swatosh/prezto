@@ -45,7 +45,7 @@ alias g="git --no-pager"
 alias v="nvim"
 alias ls="ls -G"
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
-alias jg="grep -RIE --exclude-dir=node_modules --exclude-dir=public --exclude-dir=bootsnap --exclude-dir=coverage --exclude-dir=tinymce --exclude-dir=tmp --exclude-dir=vendor --exclude-dir=log --exclude-dir=bundler --exclude-dir=.git --devices=skip --exclude=\"*.js.map\" --exclude=\"*.svg\""
+alias jg="grep -RIE --exclude-dir=.ruby-lsp --exclude-dir=node_modules --exclude-dir=public --exclude-dir=bootsnap --exclude-dir=coverage --exclude-dir=tinymce --exclude-dir=tmp --exclude-dir=vendor --exclude-dir=log --exclude-dir=bundler --exclude-dir=.git --devices=skip --exclude=\"*.js.map\" --exclude=\"*.svg\""
 alias pull-all-repos="find ~ \( -path ~/Library/* -or -path ~/.Trash* -or -path ~/.local/* \) -prune -or -maxdepth 6 -type d -name .git -print -execdir zsh -c 'git remote -v show | tee >([ \$(wc -c) -gt 0 ] && git pull --all --prune) &' \;"
 alias be="bundle exec"
 
