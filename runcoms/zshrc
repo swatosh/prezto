@@ -49,9 +49,9 @@ alias be="bundle exec"
 
 alias jg="grep -RIE --exclude-dir=.ruby-lsp --exclude-dir=node_modules --exclude-dir=public --exclude-dir=bootsnap --exclude-dir=coverage --exclude-dir=tinymce --exclude-dir=tmp --exclude-dir=vendor --exclude-dir=log --exclude-dir=bundler --exclude-dir=.git --devices=skip --exclude=\"*.js.map\" --exclude=\"*.svg\""
 
-alias all-repos-pull="find ~ \( -path ~/Library/* -or -path ~/.Trash* -or -path ~/.local/* \) -prune -or -maxdepth 6 -type d -name .git -print -execdir zsh -c 'git remote -v show | tee >([ \$(wc -c) -gt 0 ] && git pull --all --prune || pwd) &' \;"
+alias all-repos-pull="find ~ \( -path ~/Library/* -or -path ~/.Trash* -or -path ~/.local/* \) -prune -or -maxdepth 6 -type d -name .git -print -execdir zsh -c 'git remote -v show | tee >([ \$(wc -c) -gt 0 ] && git pull --all --prune --tags || pwd) &' \;"
 
-alias all-repos-status="find ~ \( -path ~/Library/* -or -path ~/.Trash* -or -path ~/.local/* \) -prune -or -maxdepth 6 -type d -name .git -exec sh -c 'for d in \$(dirname \$@) ; do ( cd "\$d" || exit ; printf \"#%.0s\" {1..88} ; printf \"\n\" ; pwd ; git status -sb ) ; done' _ {} \;"
+alias all-repos-status="find ~ \( -path ~/Library/* -or -path ~/.Trash* -or -path ~/.local/* \) -prune -or -maxdepth 6 -type d -name .git -exec sh -c 'for d in \$(dirname \$@) ; do ( cd "\$d" || exit ; printf \"A%.0s\" {1..88} ; printf \"\n\" ; pwd ; git status -sb ; printf \"Z%.0s\" {1..88} ; printf \"\n\") ; done' _ {} \;"
 
 # File size
 alias fs="stat -f \"%z bytes\""
